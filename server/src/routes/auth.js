@@ -168,3 +168,4 @@ authRoutes.post(
     res.json({ ok: true });
   }),
 );
+
