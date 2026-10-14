@@ -1,0 +1,26 @@
+{
+  "name": "halo-chat",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Halo — a realtime chat app with servers, DMs, friends, voice/video calling and rich message formatting.",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c magenta,cyan \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm --workspace server run dev",
+    "dev:client": "npm --workspace client run dev",
+    "build": "npm --workspace client run build",
+    "start": "npm --workspace server run start",
+    "typecheck": "npm --workspace client run typecheck",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
