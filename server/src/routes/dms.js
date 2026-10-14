@@ -44,3 +44,4 @@ dmRoutes.get(
     res.json({ dm: serializeDm(dm, req.user.id), participant: publicUser(getUserById(otherId)) });
   }),
 );
+

@@ -45,3 +45,4 @@ userRoutes.get(
     });
   }),
 );
+
